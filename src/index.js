@@ -1,2 +1,8 @@
 const fs = require("fs");
-fs.readFileSync("./logs");
+const file = fs.readFileSync("./logs");
+
+if (!file) {
+  throw new Error("logs were empty");
+} else {
+  console.log(JSON.stringify(file));
+}
