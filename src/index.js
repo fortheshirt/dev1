@@ -1,1 +1,2 @@
-console.log("init");
+const fs = require("fs");
+fs.readFileSync("./logs");
